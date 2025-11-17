@@ -49,7 +49,7 @@ function App() {
 
     try {
       // Replace YOUR_API_KEY with your OpenWeatherMap API key
-      const API_KEY = 'a19a6f4e6af080078fa4d4327ff21e08';
+      const API_KEY = import.meta.env.VITE_OPENWEATHER_API_KEY;
       const response = await fetch(
         `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${API_KEY}`
       );
